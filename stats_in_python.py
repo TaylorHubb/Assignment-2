@@ -44,7 +44,7 @@ def calculate_variance(numbers:list)->float:
 def calculate_std_dev(numbers:list)->float:
     # TODO - Complete the function to return the standard deviation of the numbers in the list
     variance = calculate_variance(numbers)
-    std_dev = math.sprt(variance)
+    std_dev = math.sqrt(variance)
     return std_dev
 
 def calculate_median(number:list)->float:
