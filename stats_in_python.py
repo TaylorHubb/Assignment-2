@@ -17,10 +17,9 @@ def load_data(filepath:str, column:int)->tuple[list, int]:
             except ValueError:
                 continue
             numbers.append(num)
-        return numbers, len(numbers)
     if len(numbers) == 0:
         raise ValueError(f"There were no valid number(s) in column {column} in file: {filepath}")
-    
+    return numbers, len(numbers)
 
 def calculate_average(numbers:list)->float:
     # TODO - Complete the function to return the average of the list of numbers
