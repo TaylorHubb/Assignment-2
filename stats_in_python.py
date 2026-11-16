@@ -1,7 +1,7 @@
 import sys
 import math
 
-def load_data(filepath:str, column:int)->tuple[list, int]:
+def load_data(filepath:str, column:int)->tuple[list, int, int]:
     # TODO - Complete the function so it loads the data from the file into a list
     # The function returns a tuple that contains the list of values and the total number 
     # of values in the column
