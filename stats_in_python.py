@@ -18,7 +18,6 @@ def load_data(filepath:str, column:int)->tuple[list, int]:
                 continue
             numbers.append(num)
         return numbers, len(numbers)
-    pass
     
 
 def calculate_average(numbers:list)->float:
