@@ -16,6 +16,8 @@ def load_data(filepath:str, column:int)->tuple[list, int]:
                 num = float(num)
             except ValueError:
                 continue
+            if math.isnan(num):
+                continue
             numbers.append(num)
     if len(numbers) == 0:
         raise ValueError(f"There were no valid number(s) in column {column} in file: {filepath}")
