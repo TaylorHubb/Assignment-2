@@ -7,7 +7,9 @@ def load_data(filepath:str, column:int)->tuple[list, int]:
     # of values in the column
     numbers = []
     with open(filepath, 'r') as infile:
+        count = 0
         for line_number, line in enumerate (infile, start=0):
+            count += 1
             try:
                num = line.split("\t")[column]
             except IndexError:
@@ -21,7 +23,7 @@ def load_data(filepath:str, column:int)->tuple[list, int]:
             numbers.append(num)
     if len(numbers) == 0:
         raise ValueError(f"There were no valid number(s) in column {column} in file: {filepath}")
-    return numbers, len(numbers)
+    return numbers, count, len(numbers)
 
 def calculate_average(numbers:list)->float:
     # TODO - Complete the function to return the average of the list of numbers
