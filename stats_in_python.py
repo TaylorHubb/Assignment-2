@@ -28,7 +28,7 @@ def calculate_average(numbers:list)->float:
 def get_max_and_min(numbers:list)->tuple[float, float]:
     # TODO - Complete the function to return a tuple with the maximum and minimum
     # values in the list, in that order
-    pass
+    return (max(numbers), min(numbers))
 
 def calculate_variance(numbers:list)->float:
     # TODO - Complete the function to return the variance of the numbers in the list
