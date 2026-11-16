@@ -49,6 +49,15 @@ def calculate_std_dev(numbers:list)->float:
 
 def calculate_median(number:list)->float:
     # TODO - Complete the function to return the median of the numbers in the list
-    pass
+    sorted_numbers = sorted(number)
+    n = len(sorted_numbers)
+    if n % 2 == 1:
+        middle_index = n // 2
+        return sorted_numbers[middle_index]
+    else:
+        median = (sorted_numbers[n // 2 - 1] + sorted_numbers[n // 2]) / 2
+        return median
+
+    
 
 
