@@ -32,7 +32,15 @@ def get_max_and_min(numbers:list)->tuple[float, float]:
 
 def calculate_variance(numbers:list)->float:
     # TODO - Complete the function to return the variance of the numbers in the list
-    pass
+    average = calculate_average(numbers)
+    differences = []
+    for num in numbers:
+        difference = num - average
+        squared_difference = difference ** 2
+        differences.append(squared_difference)
+    variance = (1 / (len(numbers) - 1)) * sum(differences)
+    return variance
+
 
 def calculate_std_dev(numbers:list)->float:
     # TODO - Complete the function to return the standard deviation of the numbers in the list
