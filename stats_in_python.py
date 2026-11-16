@@ -7,11 +7,11 @@ def load_data(filepath:str, column:int)->tuple[list, int]:
     # of values in the column
     numbers = []
     with open(filepath, 'r') as infile:
-        for line in infile:
+        for line_number, line in enumerate (infile, start=0):
             try:
                num = line.split("\t")[column]
             except IndexError:
-                sys.exit()
+                raise IndexError(f"Exiting: There is no valid 'list index' in column {column} in line {line_number} in file: {filepath}")
             try:
                 num = float(num)
             except ValueError:
