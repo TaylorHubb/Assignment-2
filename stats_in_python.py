@@ -63,6 +63,34 @@ def calculate_median(number:list)->float:
         median = (sorted_numbers[n // 2 - 1] + sorted_numbers[n // 2]) / 2
         return median
 
+def run_analysis(filepath:str, column:int):
+    print(filepath)
+    print(f"Column: {column}\n")
+
+    try:
+        numbers, count ,valid_num = load_data("files/data_file.txt", 3)
+        print(f"Count = {count:.3f}")
+        print(f"ValidNum = {valid_num:.3f}")
+        print(f"Average = {calculate_average(numbers):.3f}")
+        maximum , minimum = get_max_and_min(numbers)
+        print(f"Maximum = {maximum:.3f}")
+        print(f"Minimum = {minimum:.3f}")
+        print(f"Variance = {calculate_variance(numbers):.3f}")
+        print(f"Std Dev = {calculate_std_dev(numbers):.3f}")
+        print(f"Median = {calculate_median(numbers):.3f}")
+    except ValueError as error:
+        print(f"Error: {error}")
+    except IndexError as error:
+        print(error)
+    print("-" * 80)
+
+if __name__ == "__main__":
+    run_analysis("files/data_file.txt", 3)
+    run_analysis("files/data_file2.txt", 3)
+    run_analysis("files/data_file3.txt", 3)
+    run_analysis("files/data_file3.txt", 10)
+    run_analysis("files/data_file3.txt", 1)
+    run_analysis("files/data_file2.txt", 4)
     
 
 
