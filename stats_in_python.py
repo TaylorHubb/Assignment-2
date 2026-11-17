@@ -8,7 +8,7 @@ def load_data(filepath:str, column:int)->tuple[list, int, int]:
     numbers = []
     with open(filepath, 'r') as infile:
         count = 0
-        for line_number, line in enumerate (infile, start=0):
+        for line_number, line in enumerate (infile, start=1):
             count += 1
             try:
                num = line.split("\t")[column]
