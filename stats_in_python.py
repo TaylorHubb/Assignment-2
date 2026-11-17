@@ -68,7 +68,7 @@ def run_analysis(filepath:str, column:int):
     print(f"Column: {column}\n")
 
     try:
-        numbers, count ,valid_num = load_data("files/data_file.txt", 3)
+        numbers, count ,valid_num = load_data(filepath, column)
         print(f"Count = {count:.3f}")
         print(f"ValidNum = {valid_num:.3f}")
         print(f"Average = {calculate_average(numbers):.3f}")
