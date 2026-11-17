@@ -37,6 +37,8 @@ def get_max_and_min(numbers:list)->tuple[float, float]:
 
 def calculate_variance(numbers:list)->float:
     # TODO - Complete the function to return the variance of the numbers in the list
+    if len(numbers) == 1:
+        return 0.0
     average = calculate_average(numbers)
     differences = []
     for num in numbers:
